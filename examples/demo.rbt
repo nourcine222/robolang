@@ -1,0 +1,26 @@
+let step = 1;
+let path = [1, 2, 3];
+
+proc turn_around() {
+  turn 90;
+  turn 90;
+}
+
+proc walk_square(n) {
+  let i = 0;
+  while i < n {
+    move step;
+    i = i + 1;
+  }
+  return n;
+}
+
+walk_square(2);
+turn_around();
+
+if obstacle_ahead {
+  goto(0, 1);
+}
+
+goto(6, 6);
+print at_goal;
